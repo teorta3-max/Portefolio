@@ -1,0 +1,358 @@
+:root{
+  --bg:#0b0f1c;
+  --text:#e8eaff;
+  --accent1:#8a4fff;
+  --accent2:#00eaff;
+  --glass:rgba(255,255,255,0.07);
+  --border:rgba(255,255,255,0.12);
+  --radius:16px;
+}
+/* Ensemble */
+*{box-sizing:border-box;}
+body{
+  margin:0;
+  font-family:Poppins, sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  overflow-x:hidden;
+}
+
+a{text-decoration:none;color:var(--accent2)}
+
+/* Barre de navigation */
+.barredenavigation{
+  display:flex;
+  justify-content:space-between;
+  padding:18px 34px;
+  backdrop-filter:blur(12px);
+  background:rgba(0,0,0,0.4);
+  border-bottom:1px solid var(--border);
+}
+.logo{
+  font-family: "Great Vibes", cursive;
+  font-size:22px;
+  color:var(--accent2);
+}
+nav a{
+  margin-left:20px;
+  font-weight:500;
+}
+nav a:hover{color:var(--accent1)}
+
+/* présentation de base */
+.Accueil{
+  display:flex;
+  justify-content:space-between;
+  padding:80px 60px;
+}
+.Acceuil-content{max-width:50%}
+.lumière{
+  font-family:Orbitron,sans-serif;
+  font-size:48px;
+  color:var(--accent2);
+  text-shadow:0 0 12px var(--accent2), 0 0 22px var(--accent1);
+}
+.sous{opacity:.8;margin: 8px 0 30px 0;}
+
+/* Buttons */
+.btn-primaire,.btn-secondaire{
+  padding:12px 20px;
+  border-radius:10px;
+  font-weight:600;
+  border:1px solid var(--accent2);
+  transition:.2s;
+}
+.btn-primaire{
+  background:linear-gradient(90deg,var(--accent1),var(--accent2));
+  color:white;
+}
+.btn-secondaire{
+  background:transparent;
+  color:var(--accent2);
+  margin-top:8px;display:inline-block;
+}
+.btn-primaire:hover{opacity:.8;}
+.btn-secondaire:hover{background:rgba(255,255,255,0.1);}
+
+/* Photo + effet */
+.photo-wrap{position:relative;}
+.photo{
+  width:160px;height:160px;
+  border-radius:100%;
+  background:url("Image/IMG-20250629-WA0008.jpg") center/cover, #111;
+  border:2px solid var(--accent2);
+}
+.neon{
+  box-shadow:
+    0 0 20px var(--accent2),
+    0 0 40px var(--accent1),
+    inset 0 0 20px var(--accent2);
+}
+
+/* Rond */
+.effetst{
+  position:absolute;
+  top:0;
+  left:0;
+  width:160px;
+  height:160px;
+  border-radius:100%;
+  background:linear-gradient(to bottom,transparent,rgba(0,255,255,.5),transparent);
+  animation:scan 4.6s infinite;
+}
+@keyframes scan{
+  0%{transform:translateY(-100%)}
+  50%{transform:translateY(100%)}
+  100%{transform:translateY(-100%)}
+}
+
+/* Sections */
+section{padding:60px 50px;border-bottom:1px solid var(--border);}
+h2{
+  font-family:Orbitron,sans-serif;
+  margin-bottom:22px;
+}
+
+/* Compétences */
+.Compétence{margin-bottom:14px}
+.barre{
+  background:#111;
+  height:8px;
+  border-radius:6px;
+  margin-top:6px;
+  overflow:hidden;
+}
+
+.barre div{
+  height:100%;
+  background:linear-gradient(90deg,var(--accent1),var(--accent2));
+  width:0;
+  animation:grow 1.6s forwards;
+}
+@keyframes grow{
+  from{width:0}
+}
+
+/* Espace en plus */
+#Compétences p {
+  margin-top: 40px;
+}
+
+/* Projets */
+.projets-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+}
+.card{
+  padding:14px;
+  border:1px solid var(--border);
+  background:var(--glass);
+  border-radius:var(--radius);
+  transition:.2s;
+}
+.card:hover{box-shadow:0 0 18px var(--accent2)}
+.thumb{
+  height:100px;
+  background:#111;
+  border-radius:10px;
+}
+
+/* Contact */
+form{max-width:420px;display:flex;flex-direction:column;gap:10px;}
+input,textarea{
+  padding:12px;
+  border-radius:8px;
+  border:1px solid var(--border);
+  background:rgba(0,0,0,0.4);
+  color:white;
+}
+
+/*Centrage a cause d'un bug???*/
+#contact{
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  text-align: center;  
+  padding-top: 40px;   
+}
+
+#contact form{
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;  
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: stretch;
+  box-sizing: border-box;
+  padding: 0 12px;
+}
+
+/*pour qu'il y ai la place dans le message*/
+#contact textarea{
+  min-height: 120px;
+  resize: vertical;
+}
+
+/* Footer */
+footer{text-align:center;padding:18px;color:#777}
+
+/* Parallax qui rend moins beau je trouve mais bon...*/
+.parallax{
+  height: 250px;
+  background: url("Image/matrix-356024_1280.webp") center/cover fixed;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+/* Menu mobile */
+.burger{
+  display:none;
+  font-size:28px;
+  cursor:pointer;
+}
+/* Quand le menu est actif */
+.menu-mobile{
+  display:none;
+  flex-direction:column;
+  position:absolute;
+  top:60px;
+  right:20px;
+  background:rgba(0,0,0,0.7);
+  padding:12px;
+  border-radius:var(--radius);
+}
+
+/* Affichage mobile */
+@media(max-width:800px){
+  .menu-desktop{display:none;}
+  .burger{display:block;}
+}
+
+/* Section Compétences */
+
+#Compétences {
+  background: linear-gradient(to bottom, rgba(10, 15, 30, 0.8), rgba(10, 15, 30, 0.95));
+  border-radius: var(--radius);
+  padding: 60px 40px;
+}
+
+.listes-compétences {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.unecompétence {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 20px 24px;
+  text-align: left;
+  transition: 0.3s ease;
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.1);
+}
+
+.unecompétence:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 25px rgba(0, 255, 255, 0.25);
+}
+
+/* Titre de compétence */
+.unecompétence .tag {
+  display: block;
+  font-family: Orbitron, sans-serif;
+  font-weight: 600;
+  font-size: 1.2rem;
+  color: var(--accent2);
+  margin-bottom: 10px;
+  text-align: center;
+  text-shadow: 0 0 10px var(--accent2);
+}
+
+/* Liste des points */
+.unecompétence ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.unecompétence li {
+  font-size: 0.95rem;
+  opacity: 0.9;
+  padding: 6px 0 6px 18px;
+  position: relative;
+  line-height: 1.4;
+}
+
+.unecompétence li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: var(--accent2);
+  text-shadow: 0 0 8px var(--accent2);
+}
+
+/* Apparition douce */
+.unecompétence {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.unecompétence.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Texte final */
+.competence-note {
+  margin-top: 50px;
+  text-align: center;
+  font-style: italic;
+  opacity: 0.8;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .unecompétence {
+    padding: 16px;
+  }
+  .unecompétence .tag {
+    font-size: 1.05rem;
+  }
+}
+
+/*  ANIMATION D’APPARITION AU SCROLL ,parce que j'ai envie.*/
+
+.skill-item {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+/* Quand l’élément devient visible */
+.skill-item.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@keyframes glow-pulse {
+  0% {
+    box-shadow: 0 0 0px var(--accent2);
+    text-shadow: 0 0 0px var(--accent2);
+  }
+  50% {
+    box-shadow: 0 0 20px var(--accent2), inset 0 0 10px var(--accent1);
+    text-shadow: 0 0 12px var(--accent2);
+  }
+  100% {
+    box-shadow: 0 0 8px var(--accent2), inset 0 0 8px var(--accent1);
+    text-shadow: 0 0 6px var(--accent2);
+  }
+}

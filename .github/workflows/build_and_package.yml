@@ -1,0 +1,97 @@
+name: Build and package projects
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch: {}
+
+jobs:
+  build_java:
+    name: Build Java (Windows)
+    if: "github.actor != 'github-actions[bot]'"
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup JDK
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: '17'
+
+      - name: Run build script (Java)
+        shell: pwsh
+        run: |
+          Write-Host "Running build-java.ps1"
+          if (Test-Path "projets/ApplicationJava/build-java.ps1") { ./projets/ApplicationJava/build-java.ps1 } else {
+            Write-Host "No build script found; attempting javac/jar manual build"
+            Push-Location projets/ApplicationJava
+            mkdir bin -ErrorAction SilentlyContinue
+            $files = Get-ChildItem -Recurse -Filter *.java | ForEach-Object { $_.FullName }
+            javac -d bin $files
+            jar cf ApplicationJava.jar -C bin .
+            Pop-Location
+          }
+
+      - name: Upload Application JAR
+        uses: actions/upload-artifact@v4
+        with:
+          name: ApplicationJava
+          path: projets/ApplicationJava/ApplicationJava.jar
+
+  build_jeu2d:
+    name: Build Jeu2D (Windows/.NET)
+    if: "github.actor != 'github-actions[bot]'"
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: '8.0.x'
+
+      - name: Run build script (MonoGame/.NET)
+        shell: pwsh
+        run: |
+          Write-Host "Running build-jeu2d.ps1"
+          if (Test-Path "projets/Jeu2D/build-jeu2d.ps1") { ./projets/Jeu2D/build-jeu2d.ps1 } else {
+            Push-Location projets/Jeu2D
+            dotnet publish -c Release -r win-x64 --self-contained false -o publish
+            Pop-Location
+          }
+
+      - name: Upload Jeu2D ZIP
+        uses: actions/upload-artifact@v4
+        with:
+          name: Jeu2D
+          path: projets/Jeu2D/Jeu2D.zip
+
+  publish_release:
+    name: Create Release and attach artifacts
+    runs-on: ubuntu-latest
+    needs: [build_java, build_jeu2d]
+    steps:
+      - name: Checkout (no commit)
+        uses: actions/checkout@v4
+
+      - name: Download Application artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: ApplicationJava
+
+      - name: Download Jeu2D artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: Jeu2D
+
+      - name: Create GitHub Release and upload artifacts
+        uses: ncipollo/release-action@v1
+        with:
+          tag: artifacts-${{ github.run_number }}
+          name: Built artifacts ${{ github.run_number }}
+          files: |
+            ApplicationJava/ApplicationJava.jar
+            Jeu2D/Jeu2D.zip
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

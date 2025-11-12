@@ -1,0 +1,7 @@
+# MonoGame Content Pipeline file
+# This is a placeholder. For full pipeline functionality, open MonoGame Pipeline Tool and add the audio files:
+# Content/Music/background.wav
+# Content/Sounds/jump.wav
+# Content/Sounds/dash.wav
+# Content/Sounds/shoot.wav
+# Content/Sounds/explosion.wav

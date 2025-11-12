@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Projet — Jeu vidéo 2D (MonoGame)</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="portefolio6.css">
+</head>
+<body>
+  <header class="barredenavigation">
+    <div class="logo">KD</div>
+    <nav class="menu-desktop">
+      <a href="portefolio6.html#Accueil">Accueil</a>
+      <a href="portefolio6.html#projets">Projets</a>
+      <a href="portefolio6.html#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main class="contenu-projet" style="padding:60px 50px">
+    <a class="btn-secondaire" href="portefolio6.html#projets">← Retour aux projets</a>
+    <h1 style="margin-top:16px">Jeu vidéo 2D — MonoGame</h1>
+
+    <section>
+      <h2>Description</h2>
+      <p>Plateformer 2D en C# (.NET 8) avec MonoGame DesktopGL : mouvements (saut, dash), tirs, IA simple des ennemis,
+        particules et gestion audio (musique d’ambiance, effets).</p>
+    </section>
+
+    <section>
+      <h2>Technologies</h2>
+      <ul>
+        <li>C# / .NET 8 — MonoGame DesktopGL</li>
+        <li>Sprites 2D, particules, caméras et collisions</li>
+        <li>Audio : <em>SoundEffect</em> / <em>Song</em> (jump, dash, shoot, explosion, background)</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Essayer le projet</h2>
+      <p>
+        <a class="btn-primaire" href="projets/Jeu2D/Jeu2D.zip">Télécharger (Windows)</a>
+        <span style="display:block;margin-top:8px;color:#666;font-size:0.95rem;">Remarque : le jeu est une application native (MonoGame). Le navigateur télécharge l'archive — il ne peut pas l'exécuter directement. Si le fichier n'existe pas, suivez les instructions ci‑dessous pour le construire.</span>
+      </p>
+      <details style="margin-top:12px">
+        <summary>Instructions rapides : construire et lancer (Windows)</summary>
+        <ol>
+          <li>Ouvrir la solution <code>projets\Jeu2D\Jeu2D.sln</code> dans Visual Studio.</li>
+          <li>Construire en <em>Release</em> pour la configuration Windows (Build → Build Solution).</li>
+          <li>Récupérer l'exécutable dans <code>projets\Jeu2D\bin\Debug\net8.0</code> (ou \bin\Release\net8.0).</li>
+          <li>Créer une archive ZIP contenant les fichiers nécessaires et placer la ZIP dans <code>projets\Jeu2D\Jeu2D.zip</code> pour activer le lien de téléchargement.</li>
+        </ol>
+        <p>Alternativement, lancez le jeu depuis Visual Studio (F5) ou utilisez <code>dotnet run --project projets\Jeu2D\Jeu2D.csproj</code> depuis PowerShell pour tester sans packaging.</p>
+      </details>
+    </section>
+
+    <section>
+      <h2>Contrôles</h2>
+      <ul>
+        <li>A / D : gauche / droite — Espace : saut — Shift : dash — K : tirer</li>
+        <li>Échap : quitter</li>
+      </ul>
+    </section>
+  </main>
+</body>
+</html>

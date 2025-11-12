@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Projet — Application Java (Gestion d'étudiants)</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="portefolio6.css">
+</head>
+<body>
+  <header class="barredenavigation">
+    <div class="logo">KD</div>
+    <nav class="menu-desktop">
+      <a href="portefolio6.html#Accueil">Accueil</a>
+      <a href="portefolio6.html#projets">Projets</a>
+      <a href="portefolio6.html#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main class="contenu-projet" style="padding:60px 50px">
+    <a class="btn-secondaire" href="portefolio6.html#projets">← Retour aux projets</a>
+    <h1 style="margin-top:16px">Application Java — Gestion d'étudiants</h1>
+
+    <section>
+      <h2>Description</h2>
+      <p>Application Java orientée objet pour gérer une liste d’étudiants via une interface graphique.
+         Architecture DAO pour séparer la logique métier et l’accès aux données.</p>
+    </section>
+
+    <section>
+      <h2>Fonctionnalités</h2>
+      <ul>
+        <li>UI (Swing/JavaFX selon implémentation) dans <code>FenetrePrincipale.java</code></li>
+        <li>Modèle : <code>Etudiant.java</code> ; Accès aux données : <code>EtudiantDAO.java</code></li>
+        <li>Point d’entrée : <code>Main.java</code></li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Essayer le projet</h2>
+      <p>
+        <!-- If you don't want to generate the JAR immediately, provide the source archive as a fallback so the link never 404s -->
+        <a class="btn-primaire" href="projets/ApplicationJava/ApplicationJava.jar">Télécharger (JAR)</a>
+        <a class="btn-secondaire" href="projets/ApplicationJava/ApplicationJava-source.zip" style="margin-left:8px;">Télécharger (Source ZIP)</a>
+        <span style="display:block;margin-top:8px;color:#666;font-size:0.95rem;">Si le JAR n'est pas présent, téléchargez l'archive source ci‑dessous ou suivez les instructions pour construire le JAR localement.</span>
+      </p>
+      <details style="margin-top:12px">
+        <summary>Instructions rapides : construire le JAR (Windows)</summary>
+        <ol>
+          <li>Installer le JDK (Java 11+).</li>
+          <li>Ouvrir PowerShell dans <code>projets\ApplicationJava</code>.</li>
+          <li>Compiler les sources : <code>javac -d bin Main.java dao\*.java model\*.java ui\*.java</code> (ou utilisez votre IDE).</li>
+          <li>Créer le JAR : <code>jar cvfe ApplicationJava.jar Main -C bin .</code>.</li>
+          <li>Copiez <code>ApplicationJava.jar</code> dans <code>projets\ApplicationJava</code> pour que le lien de téléchargement fonctionne.</li>
+        </ol>
+        <p>Pour exécuter le JAR localement : <code>java -jar ApplicationJava.jar</code> ou double‑cliquer si Java est associé.</p>
+      </details>
+    </section>
+  </main>
+  <script>
+    // Fallback: if the JAR isn't present on the server, replace the link with the source ZIP
+    (function(){
+      try {
+        var jarLink = document.querySelector('a[href$="ApplicationJava/ApplicationJava.jar"]');
+        if (!jarLink) return;
+        var jarHref = jarLink.getAttribute('href');
+        fetch(jarHref, { method: 'HEAD' }).then(function(resp){
+          if (!resp.ok) {
+            var srcHref = jarHref.replace('ApplicationJava.jar','ApplicationJava-source.zip');
+            jarLink.href = srcHref;
+            jarLink.textContent = 'Télécharger (Source ZIP)';
+            jarLink.classList && jarLink.classList.add('btn-fallback');
+            var note = document.createElement('div');
+            note.style.color = '#a00';
+            note.style.marginTop = '6px';
+            note.style.fontSize = '0.95rem';
+            note.textContent = "Le JAR n'est pas disponible ; la source est proposée en téléchargement à la place.";
+            jarLink.parentNode.insertBefore(note, jarLink.nextSibling);
+          }
+        }).catch(function(){ /* ignore network errors */ });
+      } catch(e) { /* silent */ }
+    })();
+  </script>
+</body>
+</html>
