@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Jeu2D")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2a6b9ee359e8b770b40f60d483a9ff67aea82c1a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ad57a5cfddb156694db19059c165f96435326d04")]
 [assembly: System.Reflection.AssemblyProductAttribute("Jeu2D")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Jeu2D")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
