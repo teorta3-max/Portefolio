@@ -1,16 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "G2Ib7pjqFO4=",
+  "dgSpecHash": "2b3zBZCFAJw=",
   "success": true,
-  "projectFilePath": "C:\\Users\\teort\\OneDrive\\Documents\\Junia\\Informatique\\HTML\\Portefolio\\projets\\Jeu2D\\Jeu2D.csproj",
+  "projectFilePath": "C:\\Users\\teort\\OneDrive\\Documents\\Junia\\Informatique\\HTML\\Portefolio\\projets\\Jeu2d\\Jeu2D.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\teort\\.nuget\\packages\\monogame.framework.desktopgl\\3.8.1.303\\monogame.framework.desktopgl.3.8.1.303.nupkg.sha512",
     "C:\\Users\\teort\\.nuget\\packages\\microsoft.netcore.app.ref\\8.0.22\\microsoft.netcore.app.ref.8.0.22.nupkg.sha512",
-    "C:\\Users\\teort\\.nuget\\packages\\microsoft.netcore.app.runtime.win-x64\\8.0.22\\microsoft.netcore.app.runtime.win-x64.8.0.22.nupkg.sha512",
     "C:\\Users\\teort\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\8.0.22\\microsoft.windowsdesktop.app.ref.8.0.22.nupkg.sha512",
-    "C:\\Users\\teort\\.nuget\\packages\\microsoft.windowsdesktop.app.runtime.win-x64\\8.0.22\\microsoft.windowsdesktop.app.runtime.win-x64.8.0.22.nupkg.sha512",
     "C:\\Users\\teort\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\8.0.22\\microsoft.aspnetcore.app.ref.8.0.22.nupkg.sha512",
-    "C:\\Users\\teort\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.win-x64\\8.0.22\\microsoft.aspnetcore.app.runtime.win-x64.8.0.22.nupkg.sha512",
     "C:\\Users\\teort\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\8.0.22\\microsoft.netcore.app.host.win-x64.8.0.22.nupkg.sha512"
   ],
   "logs": []

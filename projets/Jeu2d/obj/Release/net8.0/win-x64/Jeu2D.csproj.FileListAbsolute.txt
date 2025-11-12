@@ -200,3 +200,4 @@ C:\Users\teort\OneDrive\Documents\Junia\Informatique\HTML\Portefolio\projets\Jeu
 C:\Users\teort\OneDrive\Documents\Junia\Informatique\HTML\Portefolio\projets\Jeu2D\bin\Release\net8.0\win-x64\mscordbi.dll
 C:\Users\teort\OneDrive\Documents\Junia\Informatique\HTML\Portefolio\projets\Jeu2D\bin\Release\net8.0\win-x64\mscorrc.dll
 C:\Users\teort\OneDrive\Documents\Junia\Informatique\HTML\Portefolio\projets\Jeu2D\bin\Release\net8.0\win-x64\msquic.dll
+C:\Users\teort\OneDrive\Documents\Junia\Informatique\HTML\Portefolio\projets\Jeu2D\obj\Release\net8.0\win-x64\Jeu2D.sourcelink.json

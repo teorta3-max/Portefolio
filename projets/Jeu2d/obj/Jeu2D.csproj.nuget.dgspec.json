@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\teort\\OneDrive\\Documents\\Junia\\Informatique\\HTML\\Portefolio\\projets\\Jeu2D\\Jeu2D.csproj": {}
+    "C:\\Users\\teort\\OneDrive\\Documents\\Junia\\Informatique\\HTML\\Portefolio\\projets\\Jeu2d\\Jeu2D.csproj": {}
   },
   "projects": {
-    "C:\\Users\\teort\\OneDrive\\Documents\\Junia\\Informatique\\HTML\\Portefolio\\projets\\Jeu2D\\Jeu2D.csproj": {
+    "C:\\Users\\teort\\OneDrive\\Documents\\Junia\\Informatique\\HTML\\Portefolio\\projets\\Jeu2d\\Jeu2D.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\teort\\OneDrive\\Documents\\Junia\\Informatique\\HTML\\Portefolio\\projets\\Jeu2D\\Jeu2D.csproj",
+        "projectUniqueName": "C:\\Users\\teort\\OneDrive\\Documents\\Junia\\Informatique\\HTML\\Portefolio\\projets\\Jeu2d\\Jeu2D.csproj",
         "projectName": "Jeu2D",
-        "projectPath": "C:\\Users\\teort\\OneDrive\\Documents\\Junia\\Informatique\\HTML\\Portefolio\\projets\\Jeu2D\\Jeu2D.csproj",
+        "projectPath": "C:\\Users\\teort\\OneDrive\\Documents\\Junia\\Informatique\\HTML\\Portefolio\\projets\\Jeu2d\\Jeu2D.csproj",
         "packagesPath": "C:\\Users\\teort\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\teort\\OneDrive\\Documents\\Junia\\Informatique\\HTML\\Portefolio\\projets\\Jeu2D\\obj\\",
+        "outputPath": "C:\\Users\\teort\\OneDrive\\Documents\\Junia\\Informatique\\HTML\\Portefolio\\projets\\Jeu2d\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\teort\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -66,10 +66,6 @@
               "version": "[8.0.22, 8.0.22]"
             },
             {
-              "name": "Microsoft.AspNetCore.App.Runtime.win-x64",
-              "version": "[8.0.22, 8.0.22]"
-            },
-            {
               "name": "Microsoft.NETCore.App.Host.win-x64",
               "version": "[8.0.22, 8.0.22]"
             },
@@ -78,15 +74,7 @@
               "version": "[8.0.22, 8.0.22]"
             },
             {
-              "name": "Microsoft.NETCore.App.Runtime.win-x64",
-              "version": "[8.0.22, 8.0.22]"
-            },
-            {
               "name": "Microsoft.WindowsDesktop.App.Ref",
-              "version": "[8.0.22, 8.0.22]"
-            },
-            {
-              "name": "Microsoft.WindowsDesktop.App.Runtime.win-x64",
               "version": "[8.0.22, 8.0.22]"
             }
           ],
@@ -96,11 +84,6 @@
             }
           },
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.100/PortableRuntimeIdentifierGraph.json"
-        }
-      },
-      "runtimes": {
-        "win-x64": {
-          "#import": []
         }
       }
     }
