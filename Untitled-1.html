@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>CV Florian Bailly</title>
+
+<style>
+* {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    margin: 0;
+    background: #eee;
+}
+
+.cv {
+    width: 900px;
+    margin: 30px auto;
+    display: grid;
+    grid-template-columns: 33% 67%;
+    background: white;
+    box-shadow: 0 0 25px rgba(0,0,0,0.2);
+}
+
+/* ===== LEFT ===== */
+.left {
+    background: #007f8a;
+    color: white;
+    padding: 25px;
+}
+
+.photo img {
+    width: 100%;
+    border: 4px solid white;
+}
+
+.left h3 {
+    border-top: 2px solid white;
+    margin-top: 25px;
+    padding-top: 10px;
+    font-size: 16px;
+    letter-spacing: 1px;
+}
+
+.left ul {
+    padding-left: 18px;
+}
+
+.left li {
+    font-size: 14px;
+    margin-bottom: 6px;
+}
+
+.left p {
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* ===== RIGHT ===== */
+.right {
+    padding: 35px;
+    color: #333;
+}
+
+.name {
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.job {
+    letter-spacing: 3px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.info {
+    font-size: 14px;
+    margin-bottom: 25px;
+}
+
+.info div {
+    margin-bottom: 6px;
+}
+
+.section {
+    margin-bottom: 25px;
+}
+
+.section h2 {
+    font-size: 18px;
+    color: #007f8a;
+    border-bottom: 2px solid #007f8a;
+    padding-bottom: 5px;
+    margin-bottom: 12px;
+}
+
+.exp-title {
+    font-weight: bold;
+}
+
+.small {
+    font-size: 13px;
+    color: #555;
+}
+
+/* ===== LANGUES ===== */
+.lang {
+    margin-bottom: 10px;
+}
+
+.bar {
+    height: 5px;
+    background: #ddd;
+    margin-top: 5px;
+}
+
+.fill {
+    height: 100%;
+    background: #007f8a;
+}
+
+/* ===== RESPONSIVE ===== */
+@media(max-width: 950px){
+    .cv {
+        width: 95%;
+        grid-template-columns: 1fr;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="cv">
+
+<!-- LEFT -->
+<div class="left">
+    <div class="photo">
+        <img src="Florian_Bailly_Junia_copie.jpeg" alt="Photo">
+    </div>
+
+    <h3>COMPÉTENCES</h3>
+    <ul>
+        <li>Bienveillance</li>
+        <li>Prise de décision rapide</li>
+        <li>Écoute active</li>
+        <li>Adaptabilité efficace</li>
+        <li>Persévérant</li>
+    </ul>
+
+    <h3>CENTRES D’INTÉRÊT</h3>
+    <ul>
+        <li>Musique</li>
+        <li>Basket (4 ans)</li>
+        <li>Judo (12 ans)</li>
+        <li>Tennis (6 ans)</li>
+        <li>Natation (3 ans)</li>
+        <li>Ski</li>
+        <li>Lecture (BD, Manga, psychologie)</li>
+        <li>Jeux vidéo (Clash Royal Top 1%, Minecraft)</li>
+    </ul>
+
+    <h3>PROFIL</h3>
+    <p>
+        Actuellement étudiant en ingénierie générale, je recherche un stage
+        ouvrier pour développer mes compétences dans le monde professionnel.
+        Je pense pouvoir être utile grâce à mes capacités physiques comme intellectuelles.
+    </p>
+
+    <h3>CERTIFICATS / FORMATION</h3>
+    
+    <p>
+        Si vous voulez en savoir plus sur moi ou mes compétences,
+        rendez-vous sur mon portfolio que j'ai codé de A à Z. Tout y est détaillé.
+    </p>
+</div>
+
+<div class="right">
+    <div class="name">Florian <span style="color:#007f8a">Bailly</span></div>
+    <div class="job">INFORMATICIEN</div>
+
+    <div class="info">
+        <div>📞 07 68 03 36 12</div>
+        <div>✉️ florian.bailly@student.junia.com</div>
+        <div>📍 13 boulevard de Ladonne, 33600 Pessac</div>
+        <div>🎂 18 ans</div>
+        <div>🚗 Permis B</div>
+        <div>💍 Célibataire</div>
+        <div>🌐 https://teorta3-max.github.io/Portefolio</div>
+    </div>
+
+    <div class="section">
+        <h2>EXPÉRIENCE</h2>
+        <div class="small">01/2021 – 01/2021</div>
+        <div class="exp-title"> Stage chez un vétérinaire</div>
+        <div class="small">
+            Cabinet Vétérinaire du Dr Grand Moursel | Pessac | Stage
+        </div>
+        <ul class="small">
+            <li>Surveillance post-opératoire des animaux</li>
+            <li>Vente de produits vétérinaires : soins, aliments</li>
+        </ul>
+    </div>
+
+    <div class="section">
+    <h2>FORMATION</h2>
+
+    <div class="small">2025 – 2026</div>
+    <div class="exp-title">Classe préparatoire intégrée – 1ère année</div>
+    <div class="small">
+        JUNIA – École d’ingénieur | Bordeaux
+    </div>
+
+    <br>
+
+    <div class="small">2022 – 2025</div>
+    <div class="exp-title">Baccalauréat Général</div>
+    <div class="small">
+        Ensemble Scolaire Privé Saint-Genès La Salle<br>
+        Spécialités Mathématiques & NSI – Mention « Assez bien »
+    </div>
+
+    <br>
+
+    <div class="small">2018 – 2022</div>
+    <div class="exp-title">Diplôme National du Brevet</div>
+    <div class="small">
+        Collège Jeanne d’Arc Assomption<br>
+        Mention « Très bien »
+    </div>
+
+    <br>
+
+    <div class="small">2013 – 2017</div>
+    <div class="exp-title">École primaire</div>
+    <div class="small">
+        École Jeanne d’Arc Assomption – 33600 Pessac
+    </div>
+</div>
+
+    <div class="section">
+        <h2>LANGUES</h2>
+
+        <div class="lang">
+            Français – Langue maternelle
+            <div class="bar"><div class="fill" style="width:100%"></div></div>
+        </div>
+
+        <div class="lang">
+            Anglais – Avancé (C1)
+            <div class="small">Minnesota immersion 15 jours / Swansea 1 mois</div>
+            <div class="bar"><div class="fill" style="width:80%"></div></div>
+        </div>
+
+        <div class="lang">
+            Espagnol – Intermédiaire supérieur (B2)
+            <div class="small">Pampelune Erasmus+ immersion 2 mois</div>
+            <div class="bar"><div class="fill" style="width:65%"></div></div>
+        </div>
+    </div>
+
+</div>
+</div>
+
+</body>
+</html>
