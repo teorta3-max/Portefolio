@@ -128,6 +128,69 @@ body {
         grid-template-columns: 1fr;
     }
 }
+
+/* ================= IMPRESSION ================= */
+@media print {
+
+    /* Forcer l’impression des couleurs */
+    body {
+        background: white;
+        margin: 0;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+
+    /* Conteneur principal : FLEX au lieu de GRID */
+    .cv {
+        width: 100%;
+        margin: 0;
+        box-shadow: none;
+
+        display: flex !important;
+        flex-direction: row !important;
+
+        break-inside: avoid;
+        page-break-inside: avoid;
+    }
+
+    /* Colonnes */
+    .left {
+        width: 33%;
+        background: #007f8a !important;
+        color: white !important;
+    }
+
+    .right {
+        width: 67%;
+    }
+
+    /* Image : éviter qu’elle explose */
+    .photo img {
+        max-width: 150px;
+        height: auto;
+        display: block;
+        margin: 0 auto 10px;
+    }
+
+    /* Éviter les coupures internes */
+    .left,
+    .right,
+    .section {
+        break-inside: avoid;
+        page-break-inside: avoid;
+    }
+
+    /* Couleurs importantes */
+    .section h2 {
+        color: #007f8a !important;
+        border-color: #007f8a !important;
+    }
+
+    .fill {
+        background: #007f8a !important;
+    }
+}
+
 </style>
 </head>
 
