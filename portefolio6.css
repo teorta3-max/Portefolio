@@ -107,7 +107,7 @@ nav a:hover{color:var(--accent1)}
   width:clamp(140px,30vw,160px);
   height:clamp(140px,30vw,160px);
   border-radius:100%;
-  background:url("Image/IMG-20250629-WA0008.jpg") center/cover, #111;
+  background:url("Image/Image2.jpg") center/cover, #111;
   border:2px solid var(--accent2);
   top:0;
   left:0;
